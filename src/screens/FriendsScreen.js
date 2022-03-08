@@ -8,7 +8,7 @@ const FriendsScreen = ({navigation}) => {
   return (
     <SafeAreaView style={{flex: 1}}>
       <StatusBar barStyle={'dark-content'} backgroundColor="white" />
-      <View style={{borderWidth: 1, flex: 1, borderColor: 'red'}}>
+      <View style={{flex: 1}}>
         <View
           style={{
             backgroundColor: 'white',
