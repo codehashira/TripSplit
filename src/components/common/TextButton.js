@@ -19,8 +19,6 @@ const TextButton = props => {
 
 const styles = StyleSheet.create({
   button: {
-    paddingVertical: 10,
-    paddingHorizontal: 10,
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-evenly',
