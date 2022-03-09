@@ -18,17 +18,17 @@ const ExistingSplitItem = props => {
         props.onPress(props.itemdata);
       }}>
       <View>
-        <Text style={(TitleMedium, COLORS.OnSurface)}>
+        <Text style={(TitleMedium, {color: COLORS.OnSurface})}>
           {props.itemdata.splitName}
         </Text>
         <Text style={BodySmall}>
           {props.itemdata.splitToEach}
-          {' $'} - {props.itemdata.totalMembers} {'People'} -{' '}
+          {' $'} • {props.itemdata.totalMembers} {'People'} •{' '}
           {props.itemdata.tripName}
         </Text>
       </View>
       <View>
-        <Text style={(LabelLarge, {textAlign: 'right'})}>
+        <Text style={(LabelLarge, {textAlign: 'right', color: COLORS.Success})}>
           {props.itemdata.totalAmount}
           {' $'}
         </Text>

@@ -44,7 +44,15 @@ const FriendsScreen = ({navigation}) => {
               value={friendName}
               onChangeText={text => setFriendName(text)}
               placeholder={'Enter Name'}
-              style={[TitleMedium, {paddingVertical: 5}]}
+              style={[
+                TitleMedium,
+                {
+                  borderWidth: 0.4,
+                  borderColor: '#d1ccc0',
+                  marginVertical: 10,
+                  paddingVertical: 10,
+                },
+              ]}
             />
             <View
               style={{
@@ -56,7 +64,16 @@ const FriendsScreen = ({navigation}) => {
                 value={friendMobile}
                 onChangeText={text => setFriendMobile(text)}
                 placeholder={'Enter Number'}
-                style={[TitleMedium, {paddingVertical: 5}]}
+                style={[
+                  TitleMedium,
+                  {
+                    flex: 1,
+                    borderWidth: 0.4,
+                    borderColor: '#d1ccc0',
+                    paddingVertical: 10,
+                    marginRight: 5,
+                  },
+                ]}
               />
               <Button title="ADD" />
             </View>

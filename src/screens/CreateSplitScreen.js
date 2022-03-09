@@ -8,6 +8,7 @@ import TextButton from '../components/common/TextButton';
 import SplitItem from '../components/common/SplitItem';
 import Button from '../components/common/Button';
 import OutlinedButton from '../components/common/OutlinedButton';
+import Modal from 'react-native-modal';
 /*
 
   Split Name - 
@@ -47,6 +48,12 @@ const CreateSplitScreen = ({navigation}) => {
   const [tripName, setTripName] = useState('');
   const [totalAmount, setTotalAmount] = useState('');
   const [paidBy, setPaidBy] = useState('');
+
+  const [isModalVisible, setModalVisible] = useState(false);
+
+  const toggleModal = () => {
+    setModalVisible(!isModalVisible);
+  };
 
   return (
     <SafeAreaView style={{flex: 1}}>
@@ -113,7 +120,7 @@ const CreateSplitScreen = ({navigation}) => {
                 Split With 0 People
               </Text>
             </TouchableOpacity>
-            <TextButton title={'ADD'} />
+            <TextButton title={'ADD'} onPress={toggleModal} />
           </View>
           <View style={{paddingHorizontal: 4}}>
             {Data.map(item => (
@@ -131,6 +138,13 @@ const CreateSplitScreen = ({navigation}) => {
             <Button title={'CREATE'} />
           </View>
         </View>
+        <Modal isVisible={isModalVisible}>
+          <View style={{flex: 1, backgroundColor: 'white'}}>
+            <Text>Hello!</Text>
+
+            <Button title="Hide modal" onPress={toggleModal} />
+          </View>
+        </Modal>
       </View>
     </SafeAreaView>
   );

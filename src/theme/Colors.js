@@ -18,6 +18,7 @@ const COLORS = {
   Outline: '#79747e',
   SurfaceVariant: '#e7e0ec',
   OnSurfaceVariant: '#49454f',
+  Success: '#218c74',
 };
 
 export default COLORS;

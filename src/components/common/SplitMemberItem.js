@@ -24,9 +24,15 @@ const SplitMemberItem = props => {
           flexDirection: 'row',
           alignItems: 'center',
         }}>
-        <Text style={[TitleMedium]}>{props.name}</Text>
-        <Text> • </Text>
-        <Text style={TitleSmall}>{props.amount}</Text>
+        <View style={{minWidth: 70}}>
+          <Text style={[TitleMedium, {color: COLORS.OnSurface}]}>
+            {props.name}
+          </Text>
+        </View>
+        {/* <Text> • </Text> */}
+        <Text style={[TitleSmall, {color: COLORS.Success}]}>
+          {props.amount}
+        </Text>
       </View>
       <View
         style={{
@@ -36,10 +42,10 @@ const SplitMemberItem = props => {
           flexDirection: 'row',
         }}>
         <IconButton
-          Icon={<Icon name="pencil" size={18} color={COLORS.Primary} />}
+          Icon={<Icon name="pencil" size={14} color={COLORS.Primary} />}
         />
         <IconButton
-          Icon={<Icon name="remove" size={18} color={COLORS.Error} />}
+          Icon={<Icon name="remove" size={14} color={COLORS.Error} />}
         />
       </View>
     </View>
